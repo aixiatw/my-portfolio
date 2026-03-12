@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>的作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 導航 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.8);
+            padding: 15px 50px;
+            z-index: 1000;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+        
+        nav a:hover {
+            color: #4CAF50;
+        }
+        
+        /* 首頁區塊 */
+        #top {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        #top h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+        
+        #top p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin-top: 30px;
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #4CAF50;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        
+        /* 區塊通用 */
+        section {
+            padding: 80px 50px;
+            min-height: 100vh;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 3px;
+        }
+        
+        /* 作品區塊 */
+        #work {
+            background: #f9f9f9;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .portfolio-item .content {
+            padding: 20px;
+        }
+        
+        .portfolio-item h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .portfolio-item p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* 聯絡區塊 */
+        #contact {
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+        
+        #contact h2 {
+            color: #fff;
+        }
+        
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+        
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        
+        /* 頁腳 */
+        footer {
+            background: #222;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        
+        /* RWD */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+            
+            nav a {
+                margin: 0 8px;
+                font-size: 12px;
+            }
+            
+            #top h1 {
+                font-size: 2em;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航 -->
+    <nav>
+        <a href="#top">馕頁</a>
+        <a href="#work">作品集</a>
+        <a href="#portfolio">經歷</a>
+        <a href="#contact">聯絡</a>
+    </nav>
+    
+    <!-- 首頁 -->
+    <section id="top">
+        <h1>我是誰</h1>
+        <p>這裡可以放你的個人簡介</p>
+        <a href="#work" class="btn">了解更多</a>
+    </section>
+    
+    <!-- 作品集 -->
+    <section id="work">
+        <h2>作品集</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300" alt="作品1">
+                <div class="content">
+                    <h3>作品標題 1</h3>
+                    <p>作品描述文字，可以在這裡說明作品的內容和特色。</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300" alt="作品2">
+                <div class="content">
+                    <h3>作品標題 2</h3>
+                    <p>作品描述文字，可以在這裡說明作品的內容和特色。</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300" alt="作品3">
+                <div class="content">
+                    <h3>作品標題 3</h3>
+                    <p>作品描述文字，可以在這裡說明作品的內容和特色。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 經歷 -->
+    <section id="portfolio">
+        <h2>經歷</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="content">
+                    <h3>經歷 1</h3>
+                    <p>可以在这里写下你的工作经历或专业技能。</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="content">
+                    <h3>經歷 2</h3>
+                    <p>可以在这里写下你的工作经历或专业技能。</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="content">
+                    <h3>經歷 3</h3>
+                    <p>可以在这里写下你的工作经历或专业技能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 聯絡 -->
+    <section id="contact">
+        <h2>聯絡我</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+            <p>電話: 09XX-XXX-XXX</p>
+            <p>LINE: @yourlineid</p>
+        </div>
+    </section>
+    
+    <!-- 頁腳 -->
+    <footer>
+        <p>&copy; 2026 我的作品集. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        // 平滑捲動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 捲動顯示導航
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scroleY > 100) {
+                nav.style.background = 'rgba(0,0,0,0.95)';
+            } else {
+                nav.style.background = 'rgba(0,0,0,0.8)';
+            }
+        });
+    </script>
+</body>
+</html>
